@@ -10,7 +10,10 @@ El proyecto se ha utilizado en clases de estadística y matemáticas, donde el 7
 
 <br><br>
 
-## Instrucciones
-Lo puedes usar desde https://angeldavidhurtado.github.io/triangulo-de-pascal/ o descargando el repositorio y ejecutando el archivo index.html simplemente con doble clic
+## Instrucciones de ejecución
+Lo puedes usar desde https://angeldavidhurtado.github.io/pascals-triangle o descargando el repositorio y ejecutando el archivo index.html simplemente con doble clic.
 
 <br><br>
+
+
+
