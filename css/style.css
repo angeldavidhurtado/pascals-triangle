@@ -179,3 +179,27 @@ body {
         transform: translateY(-21px) scaleY(.5);
     }
 }
+
+
+
+/* --- --- Sroll Webkit --- --- */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: #3f3f6d;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 3px solid #3f3f6d;
+    background: #282852;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	border: 2px solid #3f3f6d;
+}
+
+::-webkit-scrollbar-corner {
+	background: #3f3f6d;
+}
