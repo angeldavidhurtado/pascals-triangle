@@ -1,4 +1,4 @@
-<h1>Triángulo de Pascal</h1>
+<h1 align="center">Triángulo de Pascal</h1>
 
 <br>
 
