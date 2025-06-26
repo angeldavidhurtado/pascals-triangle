@@ -1,3 +1,5 @@
+<br>
+
 <h1 align="center">Triángulo de Pascal</h1>
 
 <br>
@@ -12,3 +14,5 @@ El proyecto se ha utilizado en clases de estadística y matemáticas, donde el 7
 
 ## Instrucciones de ejecución
 Lo puedes usar desde https://angeldavidhurtado.github.io/pascals-triangle o descargando el repositorio y ejecutando el archivo index.html simplemente con doble clic.
+
+<br>
