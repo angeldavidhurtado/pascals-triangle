@@ -19,10 +19,8 @@ class Tooltip {
 	handleTouchStart = e => {
 		const value = e.target?.value
 		if (!value) return
-		this.touchTimer = setTimeout(() => {
-			const touch = e.touches[0]
-			this.showTooltip(value, touch.pageX, touch.pageY)
-		}, 500)
+		const touch = e.touches[0]
+		this.showTooltip(value, touch.pageX, touch.pageY)
 	}
 
 
