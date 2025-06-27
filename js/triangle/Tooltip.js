@@ -1,15 +1,31 @@
 class Tooltip {
 	constructor() {
 		this.tagTooltip = this.createTagTooltip()
+		document.addEventListener('mousemove', this.onHoverShowTooltip)
+		document.addEventListener('touchstart', this.handleTouchStart)
+	}
 
-		document.addEventListener('mousemove', e => {
-			const value = e.target?.value
-			if (!value) return this.tagTooltip.style.display = 'none'
-			this.tagTooltip.style.display = 'block'
-			this.tagTooltip.innerText = value
-			this.tagTooltip.style.top = `${e.pageY - 30}px`
-			this.tagTooltip.style.left = `${e.pageX}px`
-		})
+
+	onHoverShowTooltip = e => {
+		if (this.isTouchDevice()) return
+		const value = e.target?.value
+		if (!value) return this.tagTooltip.style.display = 'none'
+		this.showTooltip(value, e.pageX, e.pageY)
+	}
+
+
+	handleTouchStart = e => {
+		const value = e.target?.value
+		if (!value) return
+		this.touchTimer = setTimeout(() => {
+			const touch = e.touches[0]
+			this.showTooltip(value, touch.pageX, touch.pageY)
+		}, 500)
+	}
+
+
+	isTouchDevice = () => {
+		return 'ontouchstart' in window || navigator.maxTouchPoints > 0
 	}
 
 
@@ -18,6 +34,14 @@ class Tooltip {
 		tagTooltip.className = 'tooltip'
 		document.body.appendChild(tagTooltip)
 		return tagTooltip
+	}
+
+
+	showTooltip = (value, x, y) => {
+		this.tagTooltip.innerText = value
+		this.tagTooltip.style.display = 'block'
+		this.tagTooltip.style.top = `${y - 30}px`
+		this.tagTooltip.style.left = `${x}px`
 	}
 }
 
