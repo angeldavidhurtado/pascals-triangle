@@ -18,3 +18,4 @@ function positionTriangle() {
 }
 
 window.addEventListener("resize", positionTriangle);
+document.addEventListener('DOMContentLoaded', positionTriangle);

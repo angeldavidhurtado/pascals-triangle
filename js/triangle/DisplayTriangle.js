@@ -4,7 +4,6 @@ class DisplayTriangle {
 
         this.triangle = new PascalTriangle( size );
         this.divTriangle = element;
-        this.divTriangle.style = 'top: auto; left: 0px;';
         this.iRow;
 
         this.rowsBeingCreated = [];
@@ -47,7 +46,6 @@ class DisplayTriangle {
             simplifiedValue = this.engineeringNotation(value);
 
             var div = document.createElement("div");
-            div.title = value
             div.environment = this;
             div.innerHTML = simplifiedValue;
             div.value = value;

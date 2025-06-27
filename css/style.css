@@ -41,14 +41,25 @@ body {
     font-size: 20px;
     min-width: 70px;
     max-width: 70px;
-    overflow: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all .3s ease-out;
+    position: relative;
 }
 
 #row0 div { margin-top: 0; }
+
+.tooltip {
+    position: absolute;
+    background: darkorchid;
+    color: white;
+    padding: 5px 7px;
+    border-radius: 7px;
+    display: none;
+    font-weight: bold;
+}
+
 
 
 
