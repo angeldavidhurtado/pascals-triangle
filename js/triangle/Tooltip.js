@@ -1,3 +1,5 @@
+document.addEventListener('contextmenu', e => e.preventDefault())
+	
 class Tooltip {
 	constructor() {
 		this.tagTooltip = this.createTagTooltip()
