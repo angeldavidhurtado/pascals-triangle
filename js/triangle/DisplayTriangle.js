@@ -4,6 +4,7 @@ class DisplayTriangle {
 
         this.triangle = new PascalTriangle( size );
         this.divTriangle = element;
+        this.divTriangle.style = 'top: auto; left: 0px;';
         this.iRow;
 
         this.rowsBeingCreated = [];
@@ -22,9 +23,12 @@ class DisplayTriangle {
             setTimeout( function(environment, row, iRow) {
                 environment.rowsBeingCreated.shift();
                 row.style.animation = null;
-                
+
                 if (iRow == environment.triangle.size-1)
-                environment.divTriangle.scrollIntoView({behavior: "smooth", block: "end"});
+                    environment.divTriangle.scrollIntoView( {
+                        behavior: "smooth",
+                        block: "end"
+                    } );
             }, 300, this, newRow, this.iRow)
         )
     }
@@ -38,10 +42,12 @@ class DisplayTriangle {
 
         var values = this.triangle.triangle[i];
         var simplifiedValue;
+
         for (var value of values) {
             simplifiedValue = this.engineeringNotation(value);
 
             var div = document.createElement("div");
+            div.title = value
             div.environment = this;
             div.innerHTML = simplifiedValue;
             div.value = value;
@@ -123,4 +129,4 @@ class DisplayTriangle {
     }
 }
 
-var displayTriangle = new DisplayTriangle(document.getElementById("triangle"), 6);
+var displayTriangle = new DisplayTriangle(document.getElementById("triangle"), 5);
