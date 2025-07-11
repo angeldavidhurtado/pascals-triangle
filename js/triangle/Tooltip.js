@@ -40,8 +40,7 @@ class Tooltip {
 	showTooltip = (value, x, y) => {
 		this.tagTooltip.innerText = value
 		this.tagTooltip.style.display = 'block'
-		this.tagTooltip.style.top = `${y - 30}px`
-		this.tagTooltip.style.left = `${x}px`
+		this.tagTooltip.style.transform = `translate(${x}px, ${y - 30}px)`
 	}
 }
 

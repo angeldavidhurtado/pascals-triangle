@@ -53,6 +53,8 @@ body {
 
 .tooltip {
     position: absolute;
+    top: 0;
+    left: 0;
     background: darkorchid;
     color: white;
     padding: 5px 7px;
