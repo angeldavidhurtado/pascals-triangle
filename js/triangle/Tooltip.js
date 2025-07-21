@@ -27,9 +27,8 @@ class Tooltip {
 
 
 	onHoverShowTooltip = e => {
-		if (this.isTouchDevice()) return
 		const tag = e.target
-		if (this.tag == tag) return
+		if (tag == this.tag || tag == this.tagTooltip) return
 		const value = tag?.value
 		this.tagIsHidden = true
 		if (!value) return this.tagTooltip.style.display = 'none'
@@ -43,11 +42,6 @@ class Tooltip {
 		if (!value) return
 		this.tagIsHidden = false
 		this.showTooltip(e.target)
-	}
-
-
-	isTouchDevice = () => {
-		return 'ontouchstart' in window || navigator.maxTouchPoints > 0
 	}
 
 
