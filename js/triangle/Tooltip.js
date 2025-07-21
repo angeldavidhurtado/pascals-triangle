@@ -28,7 +28,9 @@ class Tooltip {
 
 	onHoverShowTooltip = e => {
 		if (this.isTouchDevice()) return
-		const value = e.target?.value
+		const tag = e.target
+		if (this.tag == tag) return
+		const value = tag?.value
 		this.tagIsHidden = true
 		if (!value) return this.tagTooltip.style.display = 'none'
 		this.tagIsHidden = false
